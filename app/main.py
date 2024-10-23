@@ -1,9 +1,9 @@
 import whisper
 from fastapi import FastAPI, UploadFile, File
 
-from app.src.conf import UPLOAD_DIRECTORY
-from app.src.utils.general import create_folder, remove_file
-from app.src.utils.structure import OutputSchema
+from src.conf import UPLOAD_DIRECTORY
+from src.utils.general import create_folder, remove_file
+from src.utils.structure import OutputSchema
 
 description = """
 The API for automatic speech recognition (ASR). 

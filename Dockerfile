@@ -27,6 +27,7 @@ COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 
 WORKDIR code/
 COPY app app
+COPY src src
 
 EXPOSE 80
 
