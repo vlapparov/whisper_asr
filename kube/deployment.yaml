@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-local-deployment
+  namespace: whisper
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-local-app
+  template:
+    metadata:
+      labels:
+        app: my-local-app
+    spec:
+      containers:
+      - name: my-local-container
+        image: whisper:latest
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Never
